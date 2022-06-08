@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Diagrams](#diagrams-(data-storage-and-access))
+- [Diagrams (Data Storage and Access)](#diagrams-data-storage-and-access)
 - [UI](#ui)
 - [How To Run](#how-to-run-locally)
 - [Dependencies](#dependencies)
