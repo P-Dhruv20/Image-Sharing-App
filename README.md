@@ -2,8 +2,9 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [How To Run](#how-to-run)
-- [Diagrams](#diagrams)
+- [Diagrams](#diagrams-(data-storage-and-access))
+- [UI](#ui)
+- [How To Run](#how-to-run-locally)
 - [Dependencies](#dependencies)
 
 Try it out at:
@@ -29,7 +30,61 @@ We used Chakra UI to implement most of our styling. A cool feature is that it ha
 
 
 
-## Diagrams
+## Diagrams (Data Storage and Access)
+
+<ol>
+    <li>
+       MongoDB Tables:
+        <ul>
+            <li> 
+                Users:
+                <ul>
+                    <li>User ID (type: String)</li>
+                    <li>First Name (type: String)</li>
+                    <li>Last Name (type: String)</li>
+                    <li>Email (type: String)</li>
+                    <li>Password (type: String)</li>
+                    <li>Profile Picture URL (type: String)</li>
+                </ul>
+            </li>
+              <li> 
+                  Posts:
+                <ul>
+                    <li>Post ID (type: String)</li>
+                    <li>Author/User ID (type: String)</li>  
+                    <li>Author Name (type: String)</li>
+                    <li>Author Profile Picture URL (type: String)</li>
+                    <li>Title (type: String)</li>
+                    <li>Description (type: String)</li>
+                    <li>Date (type: Date)</li>
+                    <li>Post Picture URL (type: String)</li>
+                </ul>
+            </li>
+            <li> 
+                Comments:
+                <ul>
+                    <li>Comment ID (type: String)</li>
+                    <li>Post ID (type: String)</li>
+                    <li>Author/User ID (type: String)</li>  
+                    <li>Author Name (type: String)</li>
+                    <li>Body (type: String)</li>
+                    <li>Date (type: Date)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Requests: We use Axios to make these four following requests:
+        <ul>
+            <li>Post: Used for creating new posts, new comments and new user. These requests are made with all the necessary attributes to set in the database and returns a success or failure status.</li>
+            <li>Get: Used to fetch posts on the home page, comments on the posts, all registered users on profiles page, login page, and edit proflie page. These requests returns a Array of JSON objects.</li>
+            <li>Put: Used to edit/update profile. Retuens a success or failure status.</li>  
+            <li>Delete: Used to delete posts and comments. These requests sends a success or failure status.</li>
+        </ul>
+    </li>
+</ol>
+
+## UI
 
 Home Page
 ![](https://user-images.githubusercontent.com/68174967/172293844-39417f27-f41c-453f-89bd-e25a1716817a.JPG)
